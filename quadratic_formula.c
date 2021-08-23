@@ -12,6 +12,11 @@ float neg(float a, float b, float c){
 
 int main(int argc, char * argv[])
 {
+    if (argc < 3 || 0 == strcmp(argv[1], "-h"))
+    {
+        printf("Usage: ./quadratic_formula a b c");
+        exit(-1);
+    }
     float a = atof(argv[1]);
     float b = atof(argv[2]);
     float c = atof(argv[3]);
